@@ -1,1 +1,14 @@
-
+name: AquaAC
+main: net.aquaac.AquaAC
+version: 1.0.0
+api-version: "1.21"
+author: Vayoa
+permissions:
+  aquaac.bypass:
+    default: op
+  aquaac.alerts:
+    default: op
+commands:
+  aquaac:
+    description: AquaAC admin command
+    usage: /aquaac reload
