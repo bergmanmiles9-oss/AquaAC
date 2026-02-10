@@ -2,6 +2,7 @@ package net.aquaac.check;
 
 import net.aquaac.AquaAC;
 import net.aquaac.data.PlayerData;
+import net.kyori.adventure.text.Component;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Listener;
@@ -53,9 +54,7 @@ public class Checks implements Listener {
 
         if (alertsEnabled) {
             for (Player online : Bukkit.getOnlinePlayers()) {
-                if (online.hasPermission(perm)) {
-                    online.sendMessage(msg);
-                }
+                if (online.hasPermission(perm)) online.sendMessage(msg);
             }
             plugin.getLogger().info(msg.replace('§', '&'));
         }
@@ -103,7 +102,7 @@ public class Checks implements Listener {
                         kickMsg.replace("%check%", checkName)
                 );
 
-                p.kick(org.bukkit.ChatColor.RESET + kickMsg);
+                p.kick(Component.text(kickMsg));
                 return;
             }
 
@@ -134,7 +133,6 @@ public class Checks implements Listener {
         d.lastVlDecayMs = now;
     }
 
-    // ===== Helper: map display name → config key =====
     private String mapCheckKey(String checkName) {
         String c = checkName.toLowerCase();
         if (c.startsWith("fly")) return "fly";
