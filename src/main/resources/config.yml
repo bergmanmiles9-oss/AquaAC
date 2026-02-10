@@ -1,1 +1,49 @@
+alerts:
+  enabled: true
+  permission: "aquaac.alerts"
 
+punishments:
+  enabled: true
+  kick_on: true
+  kick_vl: 20
+
+vl:
+  decay_per_second: 0.25
+
+checks:
+  fly:
+    enabled: true
+    max_air_ticks: 18
+    vl_add: 3
+
+  speed:
+    enabled: true
+    max_horizontal: 0.42
+    vl_add: 2
+
+  autoclicker:
+    enabled: true
+    sample_ms: 1200
+    max_cps: 16.5
+    min_variance_ms: 3.0
+    vl_add: 3
+
+  fast_totem:
+    enabled: true
+    pop_window_ms: 2500
+    max_pops_in_window: 2
+    swap_window_ms: 400
+    max_swaps_in_window: 3
+    vl_add: 4
+
+  fast_crystal:
+    enabled: true
+    window_ms: 1000
+    max_place_per_window: 8
+    vl_add: 3
+
+  fast_anchor:
+    enabled: true
+    window_ms: 1000
+    max_interacts_per_window: 10
+    vl_add: 3
