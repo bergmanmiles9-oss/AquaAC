@@ -1,14 +1,28 @@
 name: AquaAC
 main: net.aquaac.AquaAC
-version: 1.0.0
+version: 1.1.0
 api-version: "1.21"
-author: Vayoa
+author: Aqua
+
 permissions:
   aquaac.bypass:
     default: op
   aquaac.alerts:
     default: op
+  aquaac.admin:
+    default: op
+
 commands:
   aquaac:
     description: AquaAC admin command
     usage: /aquaac reload
+  sus:
+    description: Open the suspicious players GUI
+    permission: aquaac.admin
+  inspect:
+    description: Spectate a player
+    permission: aquaac.admin
+    usage: /inspect <player>
+  inspectoff:
+    description: Return from inspect mode
+    permission: aquaac.admin
