@@ -17,15 +17,12 @@ repositories {
 }
 
 dependencies {
-    compileOnly "io.papermc.paper:paper-api:1.21.0-R0.1-SNAPSHOT"
+    // ✅ 1.21 uses 1.21-R0.1-SNAPSHOT (NOT 1.21.0-R0.1-SNAPSHOT)
+    compileOnly "io.papermc.paper:paper-api:1.21-R0.1-SNAPSHOT"
 }
 
 tasks.withType(JavaCompile).configureEach {
     options.encoding = 'UTF-8'
-}
-
-tasks.processResources {
-    filteringCharset = 'UTF-8'
 }
 
 jar {
